@@ -20,7 +20,7 @@ Include the plugin CSS/javascript*after* the AMP script in the `<head>` of your 
 
 See example.html for how to enable the plugin 
 ## Options
-Plugin currently recieves input in the form of an array of times see below: 
+Plugin currently receives input in the form of an array of times see below: 
 
     plugins: {
     
