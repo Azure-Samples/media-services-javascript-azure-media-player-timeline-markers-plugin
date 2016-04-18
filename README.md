@@ -20,16 +20,16 @@ Include the plugin CSS/javascript*after* the AMP script in the `<head>` of your 
 
 See example.html for how to enable the plugin 
 ## Options
-Plugin currently recieves input in the form of an array of times: 
+Plugin currently recieves input in the form of an array of times see below: 
 
-'''plugins: {
-
-                timelineMarker: {
-                    markertime: ["0:00","1:30", "1:48"]
-                    
-                }
-                
-            }'''
+    plugins: {
+    
+    	timelineMarker: {
+    		markertime: ["0:00","1:30", "1:48"]
+    
+    	}
+    
+    }
 
 ##To-Do
 remove current markers when source switch occurs 
