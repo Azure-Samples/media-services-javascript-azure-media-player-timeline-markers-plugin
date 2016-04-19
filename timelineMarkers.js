@@ -1,8 +1,21 @@
+/*
+include this snippet if you're changing sources/adding a new set of markers in order to clear up the markers on your timeline before setting new ones
+var clear = document.getElementsByClassName('amp-timeline-marker');
+                 var i=0; 
+                 for (i<= 0; i < clear.length; i++){
+                     //do thing
+                     document.getElementsByClassName('amp-timeline-marker')[i].style.visibility='hidden';
+                 }
+
+
+*/
+
     duration= 0;
      (function () {
 
         amp.plugin('timelineMarker', function (options) {
             var player = this;
+			
             player.addEventListener(amp.eventName.durationchange, function () {
             duration  = player.duration();
             var progressControlSlider = getElementsByClassName("vjs-progress-control", "vjs-slider");
