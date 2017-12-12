@@ -19,14 +19,16 @@ var clear = document.getElementsByClassName('amp-timeline-marker');
             // integration with frameRateTimecodeCalculator plugin
             // src: https://github.com/mconverti/media-services-javascript-azure-media-player-framerate-timecode-calculator-plugin
             var frameRate = 100;
-            if (player && player.options_ && player.options_.plugins && player.options_.plugins.hasOwnProperty('frameRateTimecodeCalculator')) {
-              frameRate = player.frameRate();
-            }
 
             player.addEventListener(amp.eventName.durationchange, function () {
             duration  = player.duration();
             var playerId = player.id() || "azuremediaplayer";
             var progressControlSlider = getElementsByClassName("vjs-progress-control", "vjs-slider");
+
+            if (player && player.options_ && player.options_.plugins && player.options_.plugins.hasOwnProperty('frameRateTimecodeCalculator')) {
+                frameRate = player.frameRate();
+            }
+
             function getElementsByClassName(className, childClass) {
                 var elements = document.getElementById(playerId).getElementsByClassName(className);
                 var matches = [];
