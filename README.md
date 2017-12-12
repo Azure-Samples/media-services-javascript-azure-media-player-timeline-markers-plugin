@@ -19,15 +19,10 @@ Include the plugin CSS/javascript*after* the AMP script in the `<head>` of your 
 
 ```<script src="timelineMarkers.js"></script>```
 
-**important: this sample plugin's video id is azuremediaplayer and is hardcoded in the timelinemarkers.js in the following line:**
+See example.html for how to enable the plugin
 
-```var elements = document.getElementById("azuremediaplayer").getElementsByClassName(className);```
-
-**if you change the video id in your own code, be sure you update it in the javascript file as well (this will be fixed soon)**
-
-See example.html for how to enable the plugin 
 ## Options
-Plugin currently receives input in the form of an array of times see below: 
+Plugin currently receives input in the form of an array of times see below:
 
     plugins: {
     

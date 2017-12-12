@@ -18,9 +18,10 @@ var clear = document.getElementsByClassName('amp-timeline-marker');
 			
             player.addEventListener(amp.eventName.durationchange, function () {
             duration  = player.duration();
+            var playerId = player.id() || "azuremediaplayer";
             var progressControlSlider = getElementsByClassName("vjs-progress-control", "vjs-slider");
             function getElementsByClassName(className, childClass) {
-                var elements = document.getElementById("azuremediaplayer").getElementsByClassName(className);
+                var elements = document.getElementById(playerId).getElementsByClassName(className);
                 var matches = [];
 
                 function traverse(node) {
