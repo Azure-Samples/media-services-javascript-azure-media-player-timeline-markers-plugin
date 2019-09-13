@@ -1,8 +1,15 @@
 ---
-services: media-services
-platforms: javascript
-author: saraje
+page_type: sample
+languages:
+- javascript
+- html
+products:
+- azure
+description: "This plugin adds small markers onto your timeline at the configured times."
+urlFragment: media-services-javascript-azure-media-player-timeline-markers-plugin
 ---
+
+
 # Media Services: Timeline Marker Plugin for Azure Media Player
 
 
