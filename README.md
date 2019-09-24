@@ -12,13 +12,6 @@ urlFragment: media-services-js-plugin-sample
 
 # Media Services: Timeline Marker Plugin for Azure Media Player
 
-
-##Information
-Attributions: 
-
-#Introduction
-This plugin adds small markers onto your timeline at the configured times. 
-
 ## Getting Started
 Include the plugin CSS/javascript*after* the AMP script in the `<head>` of your html page:
 
