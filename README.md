@@ -6,7 +6,7 @@ languages:
 products:
 - azure
 description: "This plugin adds small markers onto your timeline at the configured times."
-urlFragment: media-services-javascript-azure-media-player-timeline-markers-plugin
+urlFragment: media-services-js-plugin-sample
 ---
 
 
