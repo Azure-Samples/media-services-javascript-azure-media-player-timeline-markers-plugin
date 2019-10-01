@@ -15,12 +15,22 @@ var clear = document.getElementsByClassName('amp-timeline-marker');
 
         amp.plugin('timelineMarker', function (options) {
             var player = this;
-			
+
+            // integration with frameRateTimecodeCalculator plugin
+            // src: https://github.com/mconverti/media-services-javascript-azure-media-player-framerate-timecode-calculator-plugin
+            var frameRate = 100;
+
             player.addEventListener(amp.eventName.durationchange, function () {
             duration  = player.duration();
+            var playerId = player.id() || "azuremediaplayer";
             var progressControlSlider = getElementsByClassName("vjs-progress-control", "vjs-slider");
+
+            if (player && player.options_ && player.options_.plugins && player.options_.plugins.hasOwnProperty('frameRateTimecodeCalculator')) {
+                frameRate = player.frameRate();
+            }
+
             function getElementsByClassName(className, childClass) {
-                var elements = document.getElementById("azuremediaplayer").getElementsByClassName(className);
+                var elements = document.getElementById(playerId).getElementsByClassName(className);
                 var matches = [];
 
                 function traverse(node) {
@@ -73,7 +83,7 @@ var clear = document.getElementsByClassName('amp-timeline-marker');
                     var timeFragments = timeFormat.split(":");
                     if (timeFragments.length > 0) {
                         switch (timeFragments.length) {
-                            case 4: return (parseInt(timeFragments[0], 10) * 60 * 60) + (parseInt(timeFragments[1], 10) * 60) + parseInt(timeFragments[2], 10) + (timeFragments[3] / 100);
+                            case 4: return (parseInt(timeFragments[0], 10) * 60 * 60) + (parseInt(timeFragments[1], 10) * 60) + parseInt(timeFragments[2], 10) + (timeFragments[3] / frameRate);
                             case 3: return (parseInt(timeFragments[0], 10) * 60 * 60) + (parseInt(timeFragments[1], 10) * 60) + parseInt(timeFragments[2], 10);
                             case 2: return parseInt(timeFragments[0], 10) * 60 + parseInt(timeFragments[1], 10);
                             case 1: return parseInt(timeFragments[0], 10);
