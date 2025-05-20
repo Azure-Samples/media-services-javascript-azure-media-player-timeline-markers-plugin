@@ -12,6 +12,8 @@ urlFragment: media-services-js-plugin-sample
 
 # Media Services: Timeline Marker Plugin for Azure Media Player
 
+**IMPORTANT NOTE : Azure Media Services have been retired on June 30, 2024. Please see the [retirement guide](https://learn.microsoft.com/azure/media-services/latest/azure-media-services-retirement).**
+
 ## Getting Started
 Include the plugin CSS/javascript*after* the AMP script in the `<head>` of your html page:
 
